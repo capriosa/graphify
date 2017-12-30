@@ -32,7 +32,7 @@ import App from './main.vue'
 // Init F7 Vue Plugin
 Vue.use(Framework7Vue)
 
-const GRAPHCMS_API = 'https://api.graphcms.com/simple/v1/cjb8epzk20p6h0174gl4poudv'
+const GRAPHCMS_API = 'https://api.graphcms.com/simple/v1/cjbtedls12mr40167fbvm517w'
 
 const apolloClient = new ApolloClient({
     link: new HttpLink({ uri: GRAPHCMS_API }),
