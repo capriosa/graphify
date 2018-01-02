@@ -86,8 +86,8 @@ Api.createPlatform = function (dest, config, options, events) {
     var creator = require('../../lib/create');
     events = setupEvents(events);
 
-    var name = 'HelloCordova';
-    var id = 'io.cordova.hellocordova';
+    var name = 'Graphify';
+    var id = 'io.cordova.graphify';
     if (config) {
         name = config.name();
         id = config.packageName();

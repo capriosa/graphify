@@ -50,7 +50,7 @@ module.exports = function (ctx) {
 		
 		checkPackageName() {
 			if (typeof packageJson.name === 'undefined' || packageJson.name === '') {
-				packageJson.name = 'hello-world'
+				packageJson.name = 'graphify'
 			} else if (/\s/g.test(packageJson.name)) {
 				packageJson.name = sys.toKebabCase(packageJson.name)
 				fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson), 'utf-8')
