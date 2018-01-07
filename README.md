@@ -18,4 +18,4 @@ Start a local webserver with hot module loading
 
 Have fun!  
 
-The demo app uses a simple GraphCMS content modell.
+The demo app uses a simple GraphCMS content model.
