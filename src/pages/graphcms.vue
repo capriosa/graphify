@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="About" back-link="Back" sliding></f7-navbar>
+    <f7-navbar title="Demo content from GraphCMS" back-link="Back" sliding></f7-navbar>
     
     <section v-if="allPhotocollections">
 
@@ -15,7 +15,7 @@
             </div>
           </f7-block-inner>
           <f7-block-inset>
-            Published by {{post.photograph}} on {{post.date}}
+            Published by {{post.photograph}} on {{post.date.substring(0,10)}}
             <br/>
             <b>{{post.location}}</b>
           </f7-block-inset>
@@ -30,9 +30,11 @@
       </f7-block>
 
     </section>
-    <h2 v-else>
+    <f7-block v-else>
+    <h2>
       Loading...
     </h2>
+    </f7-block>
 
   </f7-page>
 </template>

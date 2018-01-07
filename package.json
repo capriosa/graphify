@@ -1,5 +1,5 @@
 {
-    "name": "com.phonegap.helloworld",
+    "name": "com.phonegap.graphify",
     "version": "1.0.0",
     "description": "Brand new cordova project with framework7 - vue - webpack!",
     "scripts": {
@@ -57,7 +57,7 @@
         "vue-markdown": "^2.2.4",
         "vue-router": "^3.0.1"
     },
-    "displayName": "helloworld",
+    "displayName": "graphify",
     "cordova": {
         "plugins": {
             "cordova-plugin-whitelist": {}

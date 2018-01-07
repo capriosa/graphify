@@ -44827,8 +44827,8 @@ module.exports = function listToStyles (parentId, list) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pages_post_vue__ = __webpack_require__(/*! ./pages/post.vue */ 128);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pages_post_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__pages_post_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_about_vue__ = __webpack_require__(/*! ./pages/about.vue */ 264);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_about_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__pages_about_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_graphcms_vue__ = __webpack_require__(/*! ./pages/graphcms.vue */ 264);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_graphcms_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__pages_graphcms_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_form_vue__ = __webpack_require__(/*! ./pages/form.vue */ 269);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_form_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__pages_form_vue__);
 
@@ -44848,9 +44848,9 @@ module.exports = function listToStyles (parentId, list) {
         component: __WEBPACK_IMPORTED_MODULE_3__pages_form_vue___default.a
     },
     {
-        path: '/about/',
-        name: 'about',
-        component: __WEBPACK_IMPORTED_MODULE_2__pages_about_vue___default.a
+        path: '/graphcms/',
+        name: 'graphcms',
+        component: __WEBPACK_IMPORTED_MODULE_2__pages_graphcms_vue___default.a
     },
     {
         path: '/post/:slug',
@@ -66472,9 +66472,9 @@ if (false) {
 
 /***/ }),
 /* 264 */
-/*!*****************************!*\
-  !*** ./src/pages/about.vue ***!
-  \*****************************/
+/*!********************************!*\
+  !*** ./src/pages/graphcms.vue ***!
+  \********************************/
 /*! dynamic exports provided */
 /*! exports used: default */
 /***/ (function(module, exports, __webpack_require__) {
@@ -66482,13 +66482,13 @@ if (false) {
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(/*! !vue-style-loader!css-loader!../../node_modules/vue-loader/lib/style-compiler/index?{"vue":true,"id":"data-v-298c2b44","scoped":false,"hasInlineConfig":false}!../../node_modules/vue-loader/lib/selector?type=styles&index=0!./about.vue */ 265)
+  __webpack_require__(/*! !vue-style-loader!css-loader!../../node_modules/vue-loader/lib/style-compiler/index?{"vue":true,"id":"data-v-2f46b654","scoped":false,"hasInlineConfig":false}!../../node_modules/vue-loader/lib/selector?type=styles&index=0!./graphcms.vue */ 265)
 }
 var Component = __webpack_require__(/*! ../../node_modules/vue-loader/lib/component-normalizer */ 14)(
   /* script */
-  __webpack_require__(/*! !babel-loader!../../node_modules/vue-loader/lib/selector?type=script&index=0!./about.vue */ 267),
+  __webpack_require__(/*! !babel-loader!../../node_modules/vue-loader/lib/selector?type=script&index=0!./graphcms.vue */ 267),
   /* template */
-  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-298c2b44","hasScoped":false}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./about.vue */ 268),
+  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-2f46b654","hasScoped":false}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./graphcms.vue */ 268),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -66496,9 +66496,9 @@ var Component = __webpack_require__(/*! ../../node_modules/vue-loader/lib/compon
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/mdroste/github-repos/graphify/src/pages/about.vue"
+Component.options.__file = "/Users/mdroste/github-repos/graphify/src/pages/graphcms.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] about.vue: functional components are not supported with templates, they should use render functions.")}
+if (Component.options.functional) {console.error("[vue-loader] graphcms.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (false) {(function () {
@@ -66507,9 +66507,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-298c2b44", Component.options)
+    hotAPI.createRecord("data-v-2f46b654", Component.options)
   } else {
-    hotAPI.reload("data-v-298c2b44", Component.options)
+    hotAPI.reload("data-v-2f46b654", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -66521,9 +66521,9 @@ module.exports = Component.exports
 
 /***/ }),
 /* 265 */
-/*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/style-compiler?{"vue":true,"id":"data-v-298c2b44","scoped":false,"hasInlineConfig":false}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/about.vue ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/style-compiler?{"vue":true,"id":"data-v-2f46b654","scoped":false,"hasInlineConfig":false}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/graphcms.vue ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
@@ -66531,17 +66531,17 @@ module.exports = Component.exports
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(/*! !../../node_modules/css-loader!../../node_modules/vue-loader/lib/style-compiler?{"vue":true,"id":"data-v-298c2b44","scoped":false,"hasInlineConfig":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./about.vue */ 266);
+var content = __webpack_require__(/*! !../../node_modules/css-loader!../../node_modules/vue-loader/lib/style-compiler?{"vue":true,"id":"data-v-2f46b654","scoped":false,"hasInlineConfig":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./graphcms.vue */ 266);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(/*! ../../node_modules/vue-style-loader/lib/addStylesClient.js */ 56)("6023ec70", content, false);
+var update = __webpack_require__(/*! ../../node_modules/vue-style-loader/lib/addStylesClient.js */ 56)("f95ecaaa", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-298c2b44\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./about.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-298c2b44\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./about.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2f46b654\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./graphcms.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2f46b654\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./graphcms.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -66552,9 +66552,9 @@ if(false) {
 
 /***/ }),
 /* 266 */
-/*!*********************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/style-compiler?{"vue":true,"id":"data-v-298c2b44","scoped":false,"hasInlineConfig":false}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/about.vue ***!
-  \*********************************************************************************************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/style-compiler?{"vue":true,"id":"data-v-2f46b654","scoped":false,"hasInlineConfig":false}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/graphcms.vue ***!
+  \************************************************************************************************************************************************************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
@@ -66571,9 +66571,9 @@ exports.push([module.i, "\nimg {\n  max-width:100%;\n}\n", ""]);
 
 /***/ }),
 /* 267 */
-/*!***************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/pages/about.vue ***!
-  \***************************************************************************************************************************/
+/*!******************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/pages/graphcms.vue ***!
+  \******************************************************************************************************************************/
 /*! exports provided: default */
 /*! all exports used */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -66623,18 +66623,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
 
 
 const Photocollections_PER_PAGE = 2;
@@ -66699,9 +66687,9 @@ const allPhotocollections = __WEBPACK_IMPORTED_MODULE_0_graphql_tag___default.a`
 
 /***/ }),
 /* 268 */
-/*!****************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-298c2b44","hasScoped":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/about.vue ***!
-  \****************************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-2f46b654","hasScoped":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/graphcms.vue ***!
+  \*******************************************************************************************************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
@@ -66709,19 +66697,13 @@ const allPhotocollections = __WEBPACK_IMPORTED_MODULE_0_graphql_tag___default.a`
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('f7-page', [_c('f7-navbar', {
     attrs: {
-      "title": "About",
+      "title": "Demo content from GraphCMS",
       "back-link": "Back",
       "sliding": ""
     }
   }), _vm._v(" "), (_vm.allPhotocollections) ? _c('section', [_vm._l((_vm.allPhotocollections), function(post) {
     return _c('f7-block', {
       key: post.id
-    }, [_c('f7-link', {
-      attrs: {
-        "href": "#",
-        "animate-pages": false,
-        "ignore-cache": true
-      }
     }, [_c('f7-block-title', [_vm._v(_vm._s(post.title))]), _vm._v(" "), _c('f7-block-inner', [_c('div', {
       staticClass: "placeholder"
     }, [_c('img', {
@@ -66729,18 +66711,18 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "alt": post.title,
         "src": ("https://media.graphcms.com/resize=w:400,fit:crop/" + (post.photo.handle))
       }
-    })])]), _vm._v(" "), _c('f7-block-inset', [_vm._v("\n          Published by " + _vm._s(post.photograph) + " on " + _vm._s(post.date) + "\n          "), _c('br'), _vm._v(" "), _c('b', [_vm._v(_vm._s(post.location))])])], 1)], 1)
+    })])]), _vm._v(" "), _c('f7-block-inset', [_vm._v("\n          Published by " + _vm._s(post.photograph) + " on " + _vm._s(post.date.substring(0, 10)) + "\n          "), _c('br'), _vm._v(" "), _c('b', [_vm._v(_vm._s(post.location))])])], 1)
   }), _vm._v(" "), _c('f7-block', [(_vm.postCount && _vm.postCount > _vm.allPhotocollections.length) ? _c('f7-button', {
     on: {
       "click": _vm.loadMorePhotocollections
     }
-  }, [_vm._v("\n        " + _vm._s(_vm.loading ? 'Loading...' : 'Show more') + "\n      \n    ")]) : _vm._e()], 1)], 2) : _c('h2', [_vm._v("\n    Loading...\n  ")])], 1)
+  }, [_vm._v("\n        " + _vm._s(_vm.loading ? 'Loading...' : 'Show more') + "\n      \n    ")]) : _vm._e()], 1)], 2) : _c('f7-block', [_c('h2', [_vm._v("\n    Loading...\n  ")])])], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-298c2b44", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-2f46b654", module.exports)
   }
 }
 
@@ -67388,7 +67370,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
@@ -67426,10 +67407,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "inner": ""
     }
-  }, [_c('p', [_vm._v("Linkes Panel live reload? Yeah!")])]), _vm._v(" "), _c('f7-block-title', [_vm._v("Load page in panel")]), _vm._v(" "), _c('f7-list', [_c('f7-list-item', {
+  }, [_c('p', [_vm._v("Left panel content goes here")])]), _vm._v(" "), _c('f7-block-title', [_vm._v("Load page in panel")]), _vm._v(" "), _c('f7-list', [_c('f7-list-item', {
     attrs: {
-      "link": "/about/",
-      "title": "About"
+      "link": "/graphcms/",
+      "title": "Demo content from GraphCMS"
     }
   }), _vm._v(" "), _c('f7-list-item', {
     attrs: {
@@ -67438,8 +67419,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   })], 1), _vm._v(" "), _c('f7-block-title', [_vm._v("Load page in main view")]), _vm._v(" "), _c('f7-list', [_c('f7-list-item', {
     attrs: {
-      "link": "/about/",
-      "title": "About",
+      "link": "/graphcms/",
+      "title": "Demo content from GraphCMS",
       "link-view": "#main-view",
       "link-close-panel": ""
     }
@@ -67469,8 +67450,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }), _vm._v(" "), _c('f7-pages', [_c('f7-page', [_c('f7-block', [_c('p', [_vm._v("Right panel content goes here")])]), _vm._v(" "), _c('f7-block-title', [_vm._v("Load page in panel")]), _vm._v(" "), _c('f7-list', [_c('f7-list-item', {
     attrs: {
-      "link": "/about/",
-      "title": "About"
+      "link": "/grapcms/",
+      "title": "Demo content from GraphCMS"
     }
   }), _vm._v(" "), _c('f7-list-item', {
     attrs: {
@@ -67479,8 +67460,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   })], 1), _vm._v(" "), _c('f7-block-title', [_vm._v("Load page in main view")]), _vm._v(" "), _c('f7-list', [_c('f7-list-item', {
     attrs: {
-      "link": "/about/",
-      "title": "About",
+      "link": "/graphcms/",
+      "title": "Demo content from GraphCMS",
       "link-view": "#main-view",
       "link-close-panel": ""
     }
@@ -67507,29 +67488,24 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "sliding": ""
     }
-  }, [_vm._v("Framework7")]), _vm._v(" "), _c('f7-nav-right', [_c('f7-link', {
+  }, [_vm._v("Graphify")]), _vm._v(" "), _c('f7-nav-right', [_c('f7-link', {
     attrs: {
       "icon": "icon-bars",
       "open-panel": "right"
     }
-  })], 1)], 1), _vm._v(" "), _c('f7-pages', [_c('f7-page', [_c('f7-block-title', [_vm._v("Welcome to my App")]), _vm._v(" "), _c('f7-block', {
+  })], 1)], 1), _vm._v(" "), _c('f7-pages', [_c('f7-page', [_c('f7-block-title', [_vm._v("Welcome to Graphify")]), _vm._v(" "), _c('f7-block', {
     attrs: {
       "inner": ""
     }
-  }), _vm._v(" "), _c('f7-block-title', [_vm._v("Navigation")]), _vm._v(" "), _c('f7-list', [_c('f7-list-item', {
+  }, [_vm._v("\n\t\t\t\t\t\tThis is a demo Phonegap app build with Framework7, Vue.js and the GraphCMS.\n\t\t\t\t\t")]), _vm._v(" "), _c('f7-block-title', [_vm._v("Navigation")]), _vm._v(" "), _c('f7-list', [_c('f7-list-item', {
     attrs: {
-      "link": "/about/",
-      "title": "About"
+      "link": "/graphcms/",
+      "title": "Demo content from GraphCMS"
     }
   }), _vm._v(" "), _c('f7-list-item', {
     attrs: {
       "link": "/form/",
       "title": "Form"
-    }
-  }), _vm._v(" "), _c('f7-list-item', {
-    attrs: {
-      "link": "/dynamic-route/blog/45/post/125/?foo=bar#about",
-      "title": "Dynamic Route"
     }
   })], 1), _vm._v(" "), _c('f7-block-title', [_vm._v("Side Panels")]), _vm._v(" "), _c('f7-block', [_c('f7-grid', [_c('f7-col', {
     attrs: {

@@ -1,10 +1,10 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "helloworld",
-  "short_name": "helloworld",
-  "version": "com.phonegap.helloworld",
-  "description": "Brand new cordova project!",
+  "name": "graphify",
+  "short_name": "graphify",
+  "version": "com.phonegap.graphify",
+  "description": "Cordova project with Framework7, Vue and GraphCMS!",
   "author": "Apache Cordova Team",
   "icons": [],
   "start_url": "index.html"
