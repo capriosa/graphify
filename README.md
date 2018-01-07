@@ -12,9 +12,9 @@ Clone this github project
 This template need cordova or phonegap, for more information see cordova installation: https://cordova.apache.org/docs/en/latest/guide/cli/
 
 After that cd to your new directory where you have cloned Graphify  
-run npm install  
+In your terminal type ```npm install ```
 start local webserver with hot module loading  
-cordova run browser -- --live-reload  
+```cordova run browser -- --live-reload```  
 
 Have fun!  
 
