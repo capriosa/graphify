@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "graphify",
+  "short_name": "graphify",
+  "version": "com.phonegap.graphify",
+  "description": "Cordova project with Framework7, Vue and GraphCMS!",
+  "author": "Apache Cordova Team",
+  "icons": [],
+  "start_url": "index.html"
+}
