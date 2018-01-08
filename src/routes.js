@@ -1,7 +1,7 @@
 import Vue from 'vue'
 
 import Post from './pages/post.vue'
-import About from './pages/about.vue'
+import Graphcms from './pages/graphcms.vue'
 import Form from './pages/form.vue'
 
 
@@ -15,9 +15,9 @@ export default [
         component: Form
     },
     {
-        path: '/about/',
-        name: 'about',
-        component: About
+        path: '/graphcms/',
+        name: 'graphcms',
+        component: Graphcms
     },
     {
         path: '/post/:slug',

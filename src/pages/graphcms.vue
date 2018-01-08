@@ -1,26 +1,34 @@
 <template>
   <f7-page>
-    <f7-navbar title="About" back-link="Back" sliding></f7-navbar>
+    <f7-navbar title="Demo content from GraphCMS" back-link="Back" sliding></f7-navbar>
     
-    <section v-if="allPhotocollections">
 
-      <f7-block v-for="post in allPhotocollections" :key="post.id">
+ 
+
+
+    <section v-if="allPhotocollections">
+      <f7-block>
+      <f7-grid>
+      
+      <f7-col width="100" tablet-width="25" v-for="post in allPhotocollections" :key="post.id">
         <!--<router-link :to="`/post/${post.slug}`" class="link">-->
         <f7-block-title>{{post.title}}</f7-block-title>
 
           <f7-block-inner>
             <div class="placeholder">
 
-              <img :alt="post.title" :src="`https://media.graphcms.com/resize=w:400,fit:crop/${post.photo.handle}`" />
+              <img :alt="post.title" :src="`https://media.graphcms.com/resize=w:400,h:280,fit:crop/${post.photo.handle}`" />
             </div>
           </f7-block-inner>
           <f7-block-inset>
-            Published by {{post.photograph}} on {{post.date}}
+            Published by {{post.photograph}} on {{post.date.substring(0,10)}}
             <br/>
             <b>{{post.location}}</b>
           </f7-block-inset>
 
       <!--</router-link>-->
+        </f7-col>
+        </f7-grid>
         </f7-block>
       <f7-block>
         <f7-button v-if="postCount && postCount > allPhotocollections.length" @click="loadMorePhotocollections">
@@ -30,16 +38,18 @@
       </f7-block>
 
     </section>
-    <h2 v-else>
+    <f7-block v-else>
+    <h2>
       Loading...
     </h2>
+    </f7-block>
 
   </f7-page>
 </template>
 
 <script>
   import gql from 'graphql-tag'
-  const Photocollections_PER_PAGE = 2
+  const Photocollections_PER_PAGE = 4
 
   const allPhotocollections = gql `
     query allPhotocollections($first: Int!, $skip: Int!) {
