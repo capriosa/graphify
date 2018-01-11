@@ -43,6 +43,8 @@ let config = function(env) {
                 { test: /\.scss$/, loader: ['vue-style-loader', 'css-loader', 'sass-loader'] },
                 { test: /\.sass$/, loader: ['vue-style-loader', 'css-loader', 'sass-loader?indentedSyntax'] },
                 { test: /\.vue$/, loader: 'vue-loader' }
+
+
             ]
         },
 
