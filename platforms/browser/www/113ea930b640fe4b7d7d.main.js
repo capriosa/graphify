@@ -67390,23 +67390,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
@@ -67582,39 +67565,31 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "link": "/form/",
       "title": "Form"
     }
-  })], 1), _vm._v(" "), _c('f7-block-title', [_vm._v("Side Panels")]), _vm._v(" "), _c('f7-block', [_c('f7-grid', [_c('f7-col', {
+  }), _vm._v(" "), _c('f7-list-item', {
     attrs: {
-      "width": "50"
+      "link-open-panel": "",
+      "link": "left",
+      "title": "Open Left Panel"
     }
-  }, [_c('f7-button', {
+  }), _vm._v(" "), _c('f7-list-item', {
     attrs: {
-      "open-panel": "left"
+      "link-open-panel": "",
+      "link": "right",
+      "title": "Open Right Panel"
     }
-  }, [_vm._v("Left Panel")])], 1), _vm._v(" "), _c('f7-col', {
+  }), _vm._v(" "), _c('f7-list-item', {
     attrs: {
-      "width": "50"
+      "link-open-popup": "",
+      "link": "#popup",
+      "title": "Open Popup"
     }
-  }, [_c('f7-button', {
+  }), _vm._v(" "), _c('f7-list-item', {
     attrs: {
-      "open-panel": "right"
+      "link-open-login-screen": "",
+      "link": "#login-screen",
+      "title": "Open Login Screen"
     }
-  }, [_vm._v("Right Panel")])], 1)], 1)], 1), _vm._v(" "), _c('f7-block-title', [_vm._v("Modals")]), _vm._v(" "), _c('f7-block', [_c('f7-grid', [_c('f7-col', {
-    attrs: {
-      "width": "50"
-    }
-  }, [_c('f7-button', {
-    attrs: {
-      "open-popup": "#popup"
-    }
-  }, [_vm._v("Popup")])], 1), _vm._v(" "), _c('f7-col', {
-    attrs: {
-      "width": "50"
-    }
-  }, [_c('f7-button', {
-    attrs: {
-      "open-login-screen": "#login-screen"
-    }
-  }, [_vm._v("Login Screen")])], 1)], 1)], 1)], 1)], 1)], 1)], 1), _vm._v(" "), _c('f7-popup', {
+  })], 1)], 1)], 1)], 1)], 1), _vm._v(" "), _c('f7-popup', {
     attrs: {
       "id": "popup"
     }
