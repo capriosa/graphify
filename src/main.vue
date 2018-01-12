@@ -1,10 +1,10 @@
 <template>
 	<!-- App -->
 	<div id="app">
-		
+
 		<!-- Statusbar -->
 		<f7-statusbar></f7-statusbar>
-		
+
 		<!-- Left Panel -->
 		<f7-panel left reveal layout="dark">
 			<f7-view id="left-panel-view" navbar-through :dynamic-navbar="true">
@@ -28,7 +28,7 @@
 				</f7-pages>
 			</f7-view>
 		</f7-panel>
-		
+
 		<!-- Right Panel -->
 		<f7-panel right cover layout="dark">
 			<f7-view id="right-panel-view" navbar-through :dynamic-navbar="true">
@@ -52,7 +52,7 @@
 				</f7-pages>
 			</f7-view>
 		</f7-panel>
-		
+
 		<!-- Main Views -->
 		<f7-views>
 			<f7-view id="main-view" navbar-through :dynamic-navbar="true" main>
@@ -66,6 +66,12 @@
 						<f7-link icon="icon-bars" open-panel="right"></f7-link>
 					</f7-nav-right>
 				</f7-navbar>
+				<f7-toolbar tabbar swipeable bottom labels>
+					<f7-link tab-link="#tab1" text="Home"><f7-icon f7="home_fill"></f7-icon></f7-link>
+					<f7-link tab-link="#tab1" text="Photos"><f7-icon f7="photos_fill"></f7-icon></f7-link>
+					<f7-link tab-link="#tab1" text="About"><f7-icon f7="info_fill"></f7-icon></f7-link>
+					<f7-link tab-link="#tab1" text="More"><f7-icon f7="favorites_fill"></f7-icon></f7-link>
+				</f7-toolbar>
 				<!-- Pages -->
 				<f7-pages>
 					<f7-page>
@@ -100,11 +106,12 @@
 								</f7-col>
 							</f7-grid>
 						</f7-block>
+						
 					</f7-page>
 				</f7-pages>
 			</f7-view>
 		</f7-views>
-		
+
 		<!-- Popup -->
 		<f7-popup id="popup">
 			<f7-view navbar-fixed>
@@ -115,12 +122,13 @@
 								<f7-link :close-popup="true">Close</f7-link>
 							</f7-nav-right>
 						</f7-navbar>
-						<f7-block>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, architecto. Cupiditate laudantium rem nesciunt numquam, ipsam. Voluptates omnis, a inventore atque ratione aliquam. Omnis iusto nemo quos ullam obcaecati, quod.</f7-block>
+						<f7-block>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, architecto. Cupiditate laudantium rem nesciunt numquam,
+							ipsam. Voluptates omnis, a inventore atque ratione aliquam. Omnis iusto nemo quos ullam obcaecati, quod.</f7-block>
 					</f7-page>
 				</f7-pages>
 			</f7-view>
 		</f7-popup>
-		
+
 		<!-- Login Screen -->
 		<f7-login-screen id="login-screen">
 			<f7-view>
@@ -147,7 +155,7 @@
 				</f7-pages>
 			</f7-view>
 		</f7-login-screen>
-	
+
 	</div>
 </template>
 

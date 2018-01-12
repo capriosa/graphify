@@ -18,4 +18,6 @@ Start a local webserver with hot module loading
 
 Have fun!  
 
-The demo app uses a simple GraphCMS content model.
+The demo app uses a simple GraphCMS content model.  
+You can download a Android .apk here:  
+https://build.phonegap.com/apps/2957837/share
