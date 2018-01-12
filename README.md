@@ -20,4 +20,6 @@ Have fun!
 
 The demo app uses a simple GraphCMS content model.  
 You can download a Android .apk here:  
-https://build.phonegap.com/apps/2957837/share
+https://build.phonegap.com/apps/2957837/share or look at the demo Web App https://f7-phonegap-graphcms.netlify.com/  
+
+

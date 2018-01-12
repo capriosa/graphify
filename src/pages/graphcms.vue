@@ -11,7 +11,7 @@
       <f7-grid>
       
       <f7-col width="100" tablet-width="25" v-for="post in allPhotocollections" :key="post.id">
-        <!--<router-link :to="`/post/${post.slug}`" class="link">-->
+        <f7-link href="`/post/${post.slug}`" class="link">
         <f7-block-title>{{post.title}}</f7-block-title>
 
           <f7-block-inner>
@@ -26,7 +26,7 @@
             <b>{{post.location}}</b>
           </f7-block-inset>
 
-      <!--</router-link>-->
+      </f7-link>
         </f7-col>
         </f7-grid>
         </f7-block>

@@ -58,9 +58,6 @@
 			<f7-view id="main-view" navbar-through :dynamic-navbar="true" main>
 				<!-- Navbar -->
 				<f7-navbar>
-					<f7-nav-left>
-						<f7-link icon="icon-bars" open-panel="left"></f7-link>
-					</f7-nav-left>
 					<f7-nav-center sliding>Graphify</f7-nav-center>
 					<f7-nav-right>
 						<f7-link icon="icon-bars" open-panel="right"></f7-link>
@@ -68,7 +65,7 @@
 				</f7-navbar>
 				<f7-toolbar tabbar swipeable bottom labels>
 					<f7-link tab-link="#tab1" text="Home"><f7-icon f7="home_fill"></f7-icon></f7-link>
-					<f7-link tab-link="#tab1" text="Photos"><f7-icon f7="photos_fill"></f7-icon></f7-link>
+					<f7-link tab-link="/graphcms" text="Photos"><f7-icon f7="photos_fill"></f7-icon></f7-link>
 					<f7-link tab-link="#tab1" text="About"><f7-icon f7="info_fill"></f7-icon></f7-link>
 					<f7-link tab-link="#tab1" text="More"><f7-icon f7="favorites_fill"></f7-icon></f7-link>
 				</f7-toolbar>
