@@ -1,8 +1,8 @@
 <template>
   <f7-page>
-    <f7-navbar title="Demo content from GraphCMS" back-link="Back" sliding></f7-navbar>
+    <f7-navbar back-link="Back" sliding></f7-navbar>
     
-
+    <f7-block-title>Demo content from GraphCMS</f7-block-title>
  
 
 
@@ -11,20 +11,20 @@
       <f7-grid>
       
       <f7-col width="100" tablet-width="25" v-for="post in allPhotocollections" :key="post.id">
-        <f7-link href="`/post/${post.slug}`" class="link">
+        <f7-link :href="`/post/${post.slug}`" class="link">
         <f7-block-title>{{post.title}}</f7-block-title>
 
-          <f7-block-inner>
+          <f7-block inner>
             <div class="placeholder">
 
               <img :alt="post.title" :src="`https://media.graphcms.com/resize=w:400,h:280,fit:crop/${post.photo.handle}`" />
             </div>
-          </f7-block-inner>
-          <f7-block-inset>
+          </f7-block>
+          <f7-block inset>
             Published by {{post.photograph}} on {{post.date.substring(0,10)}}
             <br/>
             <b>{{post.location}}</b>
-          </f7-block-inset>
+          </f7-block>
 
       </f7-link>
         </f7-col>

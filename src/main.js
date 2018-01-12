@@ -2,6 +2,7 @@ import { ApolloClient } from 'apollo-client'
 import { HttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import VueApollo from 'vue-apollo'
+import routes from './routes.js'
 
 // Import Vue
 import Vue from 'vue'
@@ -26,9 +27,6 @@ import Framework7ThemeColors from 'framework7/dist/css/framework7.material.color
 // Import App Custom Styles
 import AppStyles from './assets/sass/main.scss'
 
-// Import Routes
-import Routes from './routes.js'
-
 // Import App Component
 import App from './main.vue'
 
@@ -52,13 +50,13 @@ new Vue({
     el: '#app',
     template: '<app/>',
     apolloProvider,
-    Routes,
+    routes,
     // Init Framework7 by passing parameters here
     framework7: {
         root: '#app',
         /* Uncomment to enable Material theme: */
-        // material: true,
-        routes: Routes
+        material: true,
+        routes: routes
     },
     // Register App Component
     components: {

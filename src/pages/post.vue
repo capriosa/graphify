@@ -36,7 +36,7 @@
   `
 
   export default {
-    name: 'PostPage',
+    name: 'Post',
     data: () => ({
       loading: 0
     }),

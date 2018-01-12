@@ -1,7 +1,7 @@
 <template>
 	<!-- App -->
 	<div id="app">
-
+		
 		<!-- Statusbar -->
 		<f7-statusbar></f7-statusbar>
 
@@ -140,5 +140,7 @@
 </template>
 
 <script>
-	export default {}
+	export default {
+		name: 'app',
+	}
 </script>
