@@ -50,13 +50,14 @@ new Vue({
     el: '#app',
     template: '<app/>',
     apolloProvider,
-    routes,
+
     // Init Framework7 by passing parameters here
     framework7: {
         root: '#app',
         /* Uncomment to enable Material theme: */
         material: true,
         routes: routes
+
     },
     // Register App Component
     components: {

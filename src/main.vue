@@ -57,7 +57,8 @@
 		<f7-views>
 			<f7-view id="main-view" navbar-through :dynamic-navbar="true" main>
 				<!-- Navbar -->
-				<f7-navbar>
+				<f7-navbar back-link="Back">
+					
 					<f7-nav-center sliding>Graphify</f7-nav-center>
 					<f7-nav-right>
 						<f7-link icon="icon-bars" open-panel="right"></f7-link>

@@ -4,6 +4,7 @@
     
     <f7-block-title>Demo content from GraphCMS</f7-block-title>
  
+    <f7-block>Copyright:<br> <em>Images by Unsplash</em></f7-block>
 
 
     <section v-if="allPhotocollections">
@@ -42,6 +43,7 @@
     <h2>
       Loading...
     </h2>
+    <f7-preloader color="blue" size="44px"></f7-preloader>
     </f7-block>
 
   </f7-page>
