@@ -4,7 +4,7 @@
     
     <f7-block-title>Demo content from GraphCMS</f7-block-title>
  
-    <f7-block>Copyright:<br> <em>Text - Wikipedia<br>Image: Unsplash</em></f7-block>
+    <f7-block v-if="photocollection">Copyright:<br> <em>Text - Wikipedia<br>Image: {{photocollection.photograph}} @Unsplash.com</em></f7-block>
 
     <section v-if="photocollection">
       
