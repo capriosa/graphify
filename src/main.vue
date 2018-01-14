@@ -1,28 +1,39 @@
 <template>
 	<!-- App -->
 	<div id="app">
-		
+
 		<!-- Statusbar -->
 		<f7-statusbar></f7-statusbar>
 
 		<!-- Left Panel -->
-		<f7-panel left reveal layout="dark">
+		<f7-panel left reveal>
 			<f7-view id="left-panel-view" navbar-through :dynamic-navbar="true">
 				<f7-navbar title="Left Panel"></f7-navbar>
 				<f7-pages>
 					<f7-page>
-						<f7-block inner>
-							<p>Left panel content goes here</p>
-						</f7-block>
-						<f7-block-title>Load page in panel</f7-block-title>
-						<f7-list>
-							<f7-list-item link="/graphcms/" title="Demo content from GraphCMS"></f7-list-item>
-							<f7-list-item link="/form/" title="Form"></f7-list-item>
-						</f7-list>
-						<f7-block-title>Load page in main view</f7-block-title>
-						<f7-list>
-							<f7-list-item link="/graphcms/" title="Demo content from GraphCMS" link-view="#main-view" link-close-panel></f7-list-item>
-							<f7-list-item link="/form/" title="Form" link-view="#main-view" link-close-panel></f7-list-item>
+						<f7-list accordion>
+							<f7-list-item accordion-item title="Accordion Item 1">
+								<f7-accordion-content>
+									<f7-block>
+										<p>Accordion Item 1 Content</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu felis volutpat, rutrum ex quis, lobortis ex.
+											Curabitur quis mattis lorem. Nullam magna lacus, interdum vel maximus nec, vestibulum non quam. Phasellus ornare
+											efficitur porttitor. Quisque neque diam, imperdiet in fermentum nec, congue vitae ante. Nullam imperdiet maximus
+											commodo. Morbi pharetra id purus ac ultrices. Duis non posuere libero.</p>
+									</f7-block>
+								</f7-accordion-content>
+							</f7-list-item>
+							<f7-list-item accordion-item title="Accordion Item 2">
+								<f7-accordion-content>
+									<f7-block>
+										<p>Accordion Item 2 Content</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu felis volutpat, rutrum ex quis, lobortis ex.
+											Curabitur quis mattis lorem. Nullam magna lacus, interdum vel maximus nec, vestibulum non quam. Phasellus ornare
+											efficitur porttitor. Quisque neque diam, imperdiet in fermentum nec, congue vitae ante. Nullam imperdiet maximus
+											commodo. Morbi pharetra id purus ac ultrices. Duis non posuere libero.</p>
+									</f7-block>
+								</f7-accordion-content>
+							</f7-list-item>
 						</f7-list>
 					</f7-page>
 				</f7-pages>
@@ -32,21 +43,16 @@
 		<!-- Right Panel -->
 		<f7-panel right cover layout="dark">
 			<f7-view id="right-panel-view" navbar-through :dynamic-navbar="true">
-				<f7-navbar title="Right Panel" sliding></f7-navbar>
+				<f7-navbar title="Right Panel"></f7-navbar>
 				<f7-pages>
 					<f7-page>
-						<f7-block>
-							<p>Right panel content goes here</p>
-						</f7-block>
-						<f7-block-title>Load page in panel</f7-block-title>
 						<f7-list>
-							<f7-list-item link="/grapcms/" title="Demo content from GraphCMS"></f7-list-item>
-							<f7-list-item link="/form/" title="Form"></f7-list-item>
-						</f7-list>
-						<f7-block-title>Load page in main view</f7-block-title>
-						<f7-list>
-							<f7-list-item link="/graphcms/" title="Demo content from GraphCMS" link-view="#main-view" link-close-panel></f7-list-item>
-							<f7-list-item link="/form/" title="Form" link-view="#main-view" link-close-panel></f7-list-item>
+							<f7-list-item title="Item 1" subtitle="Subtitle 1" text="Item 1 Text"></f7-list-item>
+							<f7-list-item title="Item 2" subtitle="Subtitle 2" text="Item 2 Text"></f7-list-item>
+							<f7-list-item title="Item 3" subtitle="Subtitle 3" text="Item 3 Text"></f7-list-item>
+							<f7-list-item title="Item 4" subtitle="Subtitle 4" text="Item 4 Text"></f7-list-item>
+							<f7-list-item title="Item 5" subtitle="Subtitle 5" text="Item 5 Text"></f7-list-item>
+							<f7-list-item title="Item 6" subtitle="Subtitle 6" text="Item 6 Text"></f7-list-item>
 						</f7-list>
 					</f7-page>
 				</f7-pages>
@@ -58,17 +64,25 @@
 			<f7-view id="main-view" navbar-through :dynamic-navbar="true" main>
 				<!-- Navbar -->
 				<f7-navbar back-link="Back">
-					
+
 					<f7-nav-center sliding>Graphify</f7-nav-center>
 					<f7-nav-right>
 						<f7-link icon="icon-bars" open-panel="right"></f7-link>
 					</f7-nav-right>
 				</f7-navbar>
 				<f7-toolbar tabbar swipeable bottom labels>
-					<f7-link tab-link="#tab1" text="Home"><f7-icon f7="home_fill"></f7-icon></f7-link>
-					<f7-link tab-link="/graphcms" text="Photos"><f7-icon f7="photos_fill"></f7-icon></f7-link>
-					<f7-link tab-link="#tab1" text="About"><f7-icon f7="info_fill"></f7-icon></f7-link>
-					<f7-link tab-link="#tab1" text="More"><f7-icon f7="favorites_fill"></f7-icon></f7-link>
+					<f7-link tab-link="#tab1" text="Home">
+						<f7-icon f7="home_fill"></f7-icon>
+					</f7-link>
+					<f7-link tab-link="/graphcms" text="Photos">
+						<f7-icon f7="photos_fill"></f7-icon>
+					</f7-link>
+					<f7-link tab-link="#tab1" text="About">
+						<f7-icon f7="info_fill"></f7-icon>
+					</f7-link>
+					<f7-link tab-link="#tab1" text="More">
+						<f7-icon f7="favorites_fill"></f7-icon>
+					</f7-link>
 				</f7-toolbar>
 				<!-- Pages -->
 				<f7-pages>
@@ -82,12 +96,11 @@
 							<f7-list-item link="/graphcms/" title="Demo content from GraphCMS"></f7-list-item>
 							<f7-list-item link="/form/" title="Form"></f7-list-item>
 							<f7-list-item link-open-panel link="left" title="Open Left Panel"></f7-list-item>
-							<f7-list-item link-open-panel link="right" title="Open Right Panel"></f7-list-item>
 							<f7-list-item link-open-popup link="#popup" title="Open Popup"></f7-list-item>
 							<f7-list-item link-open-login-screen link="#login-screen" title="Open Login Screen"></f7-list-item>
 						</f7-list>
-						
-						
+
+
 					</f7-page>
 				</f7-pages>
 			</f7-view>
