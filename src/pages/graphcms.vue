@@ -55,7 +55,7 @@
 
   const allPhotocollections = gql `
     query allPhotocollections($first: Int!, $skip: Int!) {
-      allPhotocollections(orderBy: date_DESC, first: $first, skip: $skip) {
+      allPhotocollections(orderBy: createdAt_DESC, first: $first, skip: $skip) {
         id
         slug
         title

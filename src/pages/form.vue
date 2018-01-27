@@ -2,7 +2,7 @@
 	<f7-page>
 		
 		<f7-navbar  back-link="Back" sliding></f7-navbar>
-		<f7-block-title v-if="seen">Form: {{ title }}</f7-block-title>
+		<f7-block-title v-bind:style="styleObj">Field Value: {{ title }} </f7-block-title>
 		<f7-list>
 			<f7-list-item>
 				<f7-label>Name</f7-label>
@@ -34,9 +34,9 @@
 			</f7-list-item>
 			<f7-list-item>
 				<f7-label>Gender</f7-label>
-				<f7-input type="select">
-					<option value="1">Male</option>
-					<option value="1">Female</option>
+				<f7-input type="select" v-model="title">
+					<option value="Male">Male</option>
+					<option value="Female">Female</option>
 				</f7-input>
 			</f7-list-item>
 			<f7-list-item>
@@ -45,7 +45,7 @@
 			</f7-list-item>
 			<f7-list-item>
 				<f7-label>Range</f7-label>
-				<f7-input type="range" min="0" max="100" step="1" value="90" v-model="title"></f7-input>
+				<f7-input type="range" min="0" max="255" step="1" value="90" @change="changeColor"></f7-input>
 			</f7-list-item>
 			<f7-list-item>
 				<f7-label>Textarea</f7-label>
@@ -132,13 +132,25 @@
 	export default {
 		data: function () {
 			return {
-			title: 'Change form field values and press ENTER',
+			title: '',
+			styleObj: {
+    			background: 'rgb(255,255,255)',
+				color: 'black'
+    			
+  			},
 			seen: false
         }},
     
         methods: {
             changeName: function(event) {
 				this.title = event.target.value;
+				this.seen = true
+			},
+
+			changeColor: function(event) {
+				this.title = event.target.value;
+				this.styleObj.background = 'rgb(' + event.target.value + ',' + event.target.value + ',' + event.target.value + ')'
+				//alert(this.styleObj.background)
 				this.seen = true
 			},
 			
