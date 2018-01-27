@@ -4,7 +4,10 @@
     
     <f7-block-title>Demo content from GraphCMS</f7-block-title>
  
-    <f7-block v-if="photocollection">Copyright:<br> <em>Text - Wikipedia<br>Image: {{photocollection.photograph}} @Unsplash.com</em></f7-block>
+    <f7-block v-if="photocollection">Copyright:<br> Text - Wikipedia<br>Photo: {{photocollection.photograph}} on Unsplash.com<br>
+    Published on {{photocollection.date.substring(0,10)}}
+    </f7-block>
+
 
     <section v-if="photocollection">
       
@@ -19,7 +22,7 @@
 
               <img :alt="photocollection.title" :src="`https://media.graphcms.com/resize=w:800,h:480,fit:crop/${photocollection.photo.handle}`" />
             </div>
-            <f7-block footer>Published by {{photocollection.photograph}} on {{photocollection.date.substring(0,10)}}</f7-block>
+            <f7-block footer></f7-block>
             
             
           </f7-block>
