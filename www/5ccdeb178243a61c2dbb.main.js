@@ -15,7 +15,7 @@
       }
     }
   `;t.default={name:"PostPage",data:function(){return{loading:0,likes:0}},methods:{addLike:function(e){this.likes++,this.$apollo.mutate({mutation:a.a`mutation{updatePhotocollection(
-  id: "cjcytcc9tg4hc0153kic5vej2",
+  id: "{{ photocollection.id }}",
   likes: 350
 ) 
     {
