@@ -14,7 +14,7 @@
       content
     }
   }
-`;t.default={name:"PostPage",data:function(){return{loading:0}},methods:{addLike:function(){console.log(this.photocollection.likes),this.$apollo.mutate({mutation:a.a`mutation  {updatePhotocollection(
+`;t.default={name:"PostPage",data:function(){return{loading:0}},methods:{addLike:function(){console.log(this.photocollection.likes+1),this.$apollo.mutate({mutation:a.a`mutation  {updatePhotocollection(
         id: ${this.photocollection.id},
         likes: ${this.photocollection.likes+1}
       ) 
