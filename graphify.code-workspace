@@ -1,5 +1,11 @@
 {
-    "settings": {
-        "git.ignoreLimitWarning": true
-    }
+	"folders": [
+		{
+			"path": "src"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+
 }

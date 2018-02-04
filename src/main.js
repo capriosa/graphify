@@ -45,20 +45,22 @@ const apolloProvider = new VueApollo({
     defaultClient: apolloClient
 })
 
+
+
 // Init App
 new Vue({
     el: '#app',
     template: '<app/>',
     apolloProvider,
 
-    
+
 
     // Init Framework7 by passing parameters here
     framework7: {
         root: '#app',
         /* Uncomment to enable Material theme: */
         material: true,
-        
+
         routes: routes
 
     },
