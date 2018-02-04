@@ -2,11 +2,16 @@
 	<f7-page>
 		
 		<f7-navbar  back-link="Back" sliding></f7-navbar>
-		<f7-block-title v-bind:style="styleObj">Field Value: {{ title }} </f7-block-title>
+		<f7-block-header>Header</f7-block-header>
+		<f7-block-title>Field Value: {{ title }} </f7-block-title>
 		<f7-list>
+			<f7-list-item v-bind:style="styleObj">
+				<f7-label>Range</f7-label>
+				<f7-input type="range" min="0" max="255" step="1" value="90" @change="changeColor"></f7-input>
+			</f7-list-item>
 			<f7-list-item>
 				<f7-label>Name</f7-label>
-				<f7-input id="title" type="text" placeholder="Name" v-model="title"></f7-input>
+				<f7-input id="title" type="text" placeholder="Name"></f7-input>
 			</f7-list-item>
 			<f7-list-item>
 				<f7-label>Password</f7-label>
@@ -43,10 +48,7 @@
 				<f7-label>Switch</f7-label>
 				<f7-input type="switch" v-model="title"></f7-input>
 			</f7-list-item>
-			<f7-list-item>
-				<f7-label>Range</f7-label>
-				<f7-input type="range" min="0" max="255" step="1" value="90" @change="changeColor"></f7-input>
-			</f7-list-item>
+			
 			<f7-list-item>
 				<f7-label>Textarea</f7-label>
 				<f7-input type="textarea" placeholder="Textarea"></f7-input>
@@ -148,10 +150,8 @@
 			},
 
 			changeColor: function(event) {
-				this.title = event.target.value;
 				this.styleObj.background = 'rgb(' + event.target.value + ',' + event.target.value + ',' + event.target.value + ')'
-				//alert(this.styleObj.background)
-				this.seen = true
+				
 			},
 			
 			changeValue: function(event) {

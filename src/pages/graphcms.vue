@@ -1,10 +1,13 @@
 <template>
   <f7-page>
-    <f7-navbar back-link="Back" sliding></f7-navbar>
+    <f7-navbar title="GraphCMS" back-link="Back"></f7-navbar>
     
-    <f7-block-title>Demo content from GraphCMS</f7-block-title>
- 
-    <f7-block>Copyright:<br> <em>Images by Unsplash</em></f7-block>
+    <f7-block inner>Copyright:<br> Photos on Unsplash
+    
+    <f7-block-header>Header</f7-block-header>
+    <f7-block-title>Demo content from my GraphCMS content model</f7-block-title>
+    <f7-block-footer>Footer</f7-block-footer>
+    </f7-block>
 
 
     <section v-if="allPhotocollections">
@@ -70,6 +73,7 @@
   `
 
   export default {
+    
     name: 'HomePage',
     data: () => ({
       loading: 0
