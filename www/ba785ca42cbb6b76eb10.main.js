@@ -23,7 +23,7 @@
       likes
 
       }}
-      `}),this.vote=!0},addRead:function(){console.log(this.photocollection.reads+1),this.$apollo.mutate({mutation:r.a`mutation{updatePhotocollection(
+      `}),this.vote=!0},addRead:function(){console.log("reads",this.photocollection.reads+1),this.$apollo.mutate({mutation:r.a`mutation{updatePhotocollection(
       id: "${this.photocollection.id}",
       reads: ${this.photocollection.reads+1},
       ) {
