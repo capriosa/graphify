@@ -14,12 +14,15 @@
       <f7-block-title>Demo content from my GraphCMS photocollection content model</f7-block-title>
       <f7-block inner>Copyright:
         <br> Text - Wikipedia
-        <br>Photo: {{photocollection.photograph}} on Unsplash.com
+        <br> Photo: {{photocollection.photograph}} on Unsplash.com
         <br> Published on {{photocollection.date.substring(0,10)}}
+        <br> Geolocation {{ photocollection.geolocation }}
+        
       </f7-block>
         <section>
           <f7-block-title>
           <h1>{{ photocollection.title }}</h1>
+          {{ photocollection.read }} reads
           </f7-block-title>
           <f7-block inner>
             <div class="placeholder">
@@ -47,6 +50,8 @@
         location
         date
         likes
+        read
+        geolocation
         photo {
           handle
         }
@@ -78,11 +83,35 @@
         }}
         `
         
-      } ,)
+      } )
 
       }
       this.vote = true
-    }},
+    },
+    addRead: function () {
+        
+       
+        this.$apollo.mutate({
+        mutation: gql`mutation{updatePhotocollection(
+        id: "${this.photocollection.id}",
+        read: ${this.photocollection.read + 1},
+        ) {
+        id,
+        read
+  
+        }}
+        `
+        
+      } )
+
+      
+      
+    }
+    },
+    
+    mounted: function(){
+        this.addRead()
+    },
     apollo: {
       $loadingKey: 'loading',
       photocollection: {
