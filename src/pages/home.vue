@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Framework7">
+    <f7-navbar title="F7" back-link="Back">
       <f7-nav-right>
         <f7-link class="searchbar-enable" data-searchbar=".searchbar-components" icon-if-ios="f7:search_strong" icon-if-md="material:search"></f7-link>
       </f7-nav-right>

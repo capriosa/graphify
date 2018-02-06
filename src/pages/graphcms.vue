@@ -4,9 +4,9 @@
     
     <f7-block inner>Copyright:<br> Photos on Unsplash
     
-    <f7-block-header>Header</f7-block-header>
+    
     <f7-block-title>Demo content from my GraphCMS content model</f7-block-title>
-    <f7-block-footer>Footer</f7-block-footer>
+    
     </f7-block>
 
 

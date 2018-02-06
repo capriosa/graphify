@@ -70,18 +70,23 @@
 				<f7-pages>
 					<f7-page>
 						<!-- Navbar -->
-						<f7-navbar>
+						<f7-navbar navbar-through>
 
 							<f7-nav-center sliding>Graphify</f7-nav-center>
 							<f7-nav-right>
 								<f7-link icon="icon-bars" open-panel="right"></f7-link>
 							</f7-nav-right>
 						</f7-navbar>
+						
 						<f7-block-title>Welcome to Graphify</f7-block-title>
 						<f7-block inner>
-							This is a demo Phonegap app build with Framework7, Vue.js and the GraphCMS.
+							This is a demo Phonegap app build with Framework7, Vue.js and the GraphCMS.<br>
+							Kitchen Sink shows all Framework7 components.
 						</f7-block>
-						<f7-block-title>Navigation</f7-block-title>
+						<f7-block>
+						<f7-block-title>Demo Components</f7-block-title>
+						
+						</f7-block>
 						<f7-list>
 							<f7-list-item link="/graphcms/" title="Demo content from GraphCMS"></f7-list-item>
 							<f7-list-item link="/form/" title="Form"></f7-list-item>

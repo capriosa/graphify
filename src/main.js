@@ -31,7 +31,7 @@ import AppStyles from './assets/sass/main.scss'
 import App from './main.vue'
 
 // Init F7 Vue Plugin
-Vue.use(Framework7Vue)
+Vue.use(Framework7Vue, Framework7)
 
 const GRAPHCMS_API = 'https://api.graphcms.com/simple/v1/cjbtedls12mr40167fbvm517w'
 
@@ -52,7 +52,7 @@ new Vue({
     el: '#app',
     template: '<app/>',
     apolloProvider,
-
+    routes,
 
 
     // Init Framework7 by passing parameters here
