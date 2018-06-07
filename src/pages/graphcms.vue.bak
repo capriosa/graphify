@@ -1,0 +1,73 @@
+
+
+<script>
+  import gql from 'graphql-tag'
+  const Photocollections_PER_PAGE = 8
+
+  const allPhotocollections = gql `
+    query allPhotocollections($first: Int!, $skip: Int!) {
+      allPhotocollections(orderBy: date_DESC, first: $first, skip: $skip) {
+        id
+        slug
+        title
+        location
+        date
+        photographRelation {
+          name
+        }
+        photo {
+          handle
+        }
+      }
+    }
+  `
+
+  export default {
+    
+    name: 'HomePage',
+    data: () => ({
+      loading: 0
+    }),
+    apollo: {
+      $loadingKey: 'loading',
+      allPhotocollections: {
+        query: allPhotocollections,
+        variables: {
+          skip: 0,
+          first: Photocollections_PER_PAGE
+        }
+      },
+      postCount: {
+        query: gql `{ _allPhotocollectionsMeta { count } }`,
+        update: ({
+          _allPhotocollectionsMeta
+        }) => _allPhotocollectionsMeta.count
+      }
+    },
+    methods: {
+      loadMorePhotocollections() {
+        this.$apollo.queries.allPhotocollections.fetchMore({
+          variables: {
+            skip: this.allPhotocollections.length
+          },
+          updateQuery: (previousResult, {
+            fetchMoreResult
+          }) => {
+            if (!fetchMoreResult) {
+              return previousResult
+            }
+            return Object.assign({}, previousResult, {
+              allPhotocollections: [...previousResult.allPhotocollections, ...fetchMoreResult.allPhotocollections]
+            })
+          }
+        })
+      }
+    }
+  }
+</script>
+
+<style>
+  img {
+    max-width:100%;
+  }
+</style>

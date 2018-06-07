@@ -1,72 +1,65 @@
 <template>
-  <div class="max-width-4 mx-auto px1">
-
-
-
-    <section v-if="photocollection">
-      <div class="clearfix">
-        <h1 class="h1">{{photocollection.title}}</h1>
-        <div class="lg-col lg-col-6">
-          <h3 class="cat px1">{{photocollection.location}}</h3>
-          Published by
-          <span>
-            <a :href="`https://unsplash.com/${photocollection.photographRelation.linktoUnsplash}`" class="link">{{photocollection.photographRelation.name}}</a>
-          </span> on {{photocollection.date.substring(0,10)}}
+  <f7-page>
+    <f7-navbar title="GraphCMS" back-link="Back"></f7-navbar>
+    <f7-block v-if="loading > 0">
+      <h2>
+        Loading...
+      </h2>
+      <f7-preloader color="blue" size="44px"></f7-preloader>
+    </f7-block>
+    <div v-else>
+      <f7-fab color="pink" @click="addLike">
+        <f7-badge color="pink">{{ photocollection.likes }}</f7-badge>
+      </f7-fab>
+      <f7-block-title>Demo content from my GraphCMS photocollection content model</f7-block-title>
+      <f7-block inner>Copyright
+        <br> Text: Wikipedia
+        <br> 
+        <span>
+            Photo: <a :href="`https://unsplash.com/${photocollection.photographRelation.linktoUnsplash}`" class="link">{{photocollection.photographRelation.name}}</a>
+           on Unsplash</span>
           <br> More photos from
           <span>
-            <router-link class="link" :to="`/photographPosts/${photocollection.photographRelation.slug}`">{{photocollection.photographRelation.name}}</router-link>
+            <a class="link" :href="`/photographPosts/${photocollection.photographRelation.slug}`">{{photocollection.photographRelation.name}}</a>
           </span>
-          <div>{{ photocollection.read }} reads</div>
-        </div>
-        <div class="lg-col lg-col-6">
-
-
-          <div>
-            <h3>Categories:</h3>
-            <router-link :to="`/continents/${photocollection.continent}`" class="link">
+        <br> Published on {{photocollection.date.substring(0,10)}}
+        <br> Geolocation {{ photocollection.geolocation }}
+        
+      </f7-block>
+        <section>
+          <f7-block-title>
+          <h1>{{ photocollection.title }}</h1>
+          {{ photocollection.read }} reads
+          </f7-block-title>
+          <f7-block inner>
+            <div class="placeholder">
+              <img :alt="photocollection.title" :src="`https://media.graphcms.com/resize=w:800,h:480,fit:crop/${photocollection.photo.handle}`"/>
+            </div>
+            <b>{{photocollection.location}}</b>
+            <div>
+            <h4>Categories:</h4>
+            <a :href="`/continents/${photocollection.continent}`" class="link">
               {{ photocollection.continent.toUpperCase() }}
-            </router-link>
+            </a>
             <span>&nbsp;</span>
-            <router-link :to="`/countries/${photocollection.country}`" class="link">
+            <a :href="`/countries/${photocollection.country}`" class="link">
               {{ photocollection.country.toUpperCase() }}
-            </router-link>
+            </a>
           </div>
           <div>
 
             <span v-for="cat in photocollection.categoryRelations" :key="cat.id">
-              <router-link :to="`/categories/${cat.slug}`" class="link">
+              <a :href="`/categories/${cat.slug}`" class="link">
                 {{ cat.slug.toUpperCase() }}
-              </router-link>
+              </a>
               &nbsp;</span>
           </div>
-        </div>
-      </div>
-      <div class="my3">
-      <f7-block inner>
-            <div class="placeholder">
-
-              <img :alt="post.title" :src="`https://media.graphcms.com/resize=w:400,h:280,fit:crop/${post.photo.handle}`" />
-            </div>
+            <vue-markdown>{{photocollection.content}}</vue-markdown>
           </f7-block>
-      </div>
-
-      <vue-markdown>{{photocollection.content}}</vue-markdown>
-
-
-
-    </section>
-    <div class="max-width-4 mx-auto px1" v-else>
-      <h2>
-        Loading...
-      </h2>
-
+        </section>
     </div>
-
-  </div>
+  </f7-page>
 </template>
-
-
-
 
 <script>
   import gql from 'graphql-tag'
@@ -81,6 +74,8 @@
         title
         continent
         country
+        likes
+        geolocation
         categoryRelations {
           id
           slug
@@ -104,7 +99,6 @@
   export default {
     name: 'PostDetails',
     components: {
-      AmpImg,
       VueMarkdown
     },
     data: () => ({

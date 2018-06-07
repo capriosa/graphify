@@ -1,56 +1,60 @@
 <template>
-  <div class="max-width-4 mx-auto px1">
+  <f7-page>
+    <f7-navbar title="GraphCMS" back-link="Back"></f7-navbar>
+    
+    <f7-block inner>Copyright:<br> Photos on Unsplash
+    
+    
+    <f7-block-title>Demo content from my GraphCMS content model</f7-block-title>
+    
+    </f7-block>
+
 
     <section v-if="allPhotocollections">
+      <f7-block>
+      <f7-grid>
       
-      <div class="clearfix">
-      <h1 class="h1">Demo Nuxt PWA/AMP site with GraphCMS as Decoupled CMS</h1>
+      <f7-col width="100" tablet-width="33" v-for="post in allPhotocollections" :key="post.id">
+        <f7-block inner>
+        <f7-link :href="`/post/${post.slug}`" class="link">
+        
 
-
-      <div   v-for="post in allPhotocollections" :key="post.id" class="lg-col lg-col-4 pr1 my3">
-        <router-link :to="`/post/${post.slug}`">
-          <f7-block inner>
+          
             <div class="placeholder">
 
-              <img :alt="post.title" :src="`https://media.graphcms.com/resize=w:400,h:280,fit:crop/${post.photo.handle}`" />
+              <img :alt="post.title" :src="`https://media.graphcms.com/resize=w:320,h:240,fit:crop/${post.photo.handle}`" />
             </div>
-          </f7-block>
+              
+             <teaserText :author="post.photographRelation.name" :location="post.location" :title="post.title" :date="post.date"/>
+          
 
-          <div>
-            <h2>{{post.location.toUpperCase()}}</h2>
-            <b>{{post.title}}</b>
-            <p>
-            Published by <span> {{post.photographRelation.name}}</span> on {{post.date.substring(0,10)}}<br>
-            </p>
-
-          </div>
-
-        </router-link>
-        </div>
-        </div>
+      </f7-link>
+      </f7-block>
+        </f7-col>
+        </f7-grid>
+        </f7-block>
+      <f7-block>
+        <f7-button v-if="postCount && postCount > allPhotocollections.length" @click="loadMorePhotocollections">
+          {{loading ? 'Loading...' : 'Show more'}}
         
-      <div class="flex items-center my2">
-        <button class="btn btn-primary" v-if="postCount && postCount > allPhotocollections.length" @click="loadMorePhotocollections">
-          {{loading ? 'Loading...' : 'Show more'}} </button>
-
-
-      </div>
+      </f7-button>
+      </f7-block>
 
     </section>
-    <div class="max-width-4 mx-auto px1" v-else>
+    <f7-block v-else>
     <h2>
       Loading...
     </h2>
+    <f7-preloader color="blue" size="44px"></f7-preloader>
+    </f7-block>
 
-    </div>
-
-  </div>
+  </f7-page>
 </template>
 
 <script>
   import gql from 'graphql-tag'
-  import TeaserText from '~/components/TeaserText';
-  const Photocollections_PER_PAGE = 12
+  import TeaserText from '../components/TeaserText';
+  const Photocollections_PER_PAGE = 9
 
   const allPhotocollections = gql `
     query allPhotocollections($first: Int!, $skip: Int!) {
@@ -73,7 +77,6 @@
   export default {
     name: 'HomePage',
     components: {
-      AmpImg,
       TeaserText
     },
     data: () => ({
