@@ -12,7 +12,3 @@ That's just a proxy to reduce dependencies/install size.
 
 **This package content is ONLY for [markdown-it](https://github.com/markdown-it)
 projects needs. Don't ask to extend it!**
-
-## License
-
-[WTFPL](http://www.wtfpl.net/txt/copying/)
