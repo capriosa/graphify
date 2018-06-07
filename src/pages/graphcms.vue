@@ -22,7 +22,7 @@
             </div>
           </f7-block>
           <f7-block inset>
-            Published by {{post.photograph}} on {{post.date.substring(0,10)}}
+            Published by {{post.photographRelation.name}} on {{post.date.substring(0,10)}}
             <br/>
             <b>{{post.location}}</b>
           </f7-block>
@@ -59,9 +59,11 @@
         id
         slug
         title
-        photograph
         location
         date
+        photographRelation {
+          name
+        }
         photo {
           handle
         }
