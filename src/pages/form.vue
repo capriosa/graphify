@@ -2,11 +2,16 @@
 	<f7-page>
 		
 		<f7-navbar  back-link="Back" sliding></f7-navbar>
-		<f7-block-title v-if="seen">Form: {{ title }}</f7-block-title>
+		<f7-block-header>Header</f7-block-header>
+		<f7-block-title>Field Value: {{ title }} </f7-block-title>
 		<f7-list>
+			<f7-list-item v-bind:style="styleObj">
+				<f7-label>Range</f7-label>
+				<f7-input type="range" min="0" max="255" step="1" value="90" @change="changeColor"></f7-input>
+			</f7-list-item>
 			<f7-list-item>
 				<f7-label>Name</f7-label>
-				<f7-input id="title" type="text" placeholder="Name" v-model="title"></f7-input>
+				<f7-input id="title" type="text" placeholder="Name"></f7-input>
 			</f7-list-item>
 			<f7-list-item>
 				<f7-label>Password</f7-label>
@@ -34,19 +39,16 @@
 			</f7-list-item>
 			<f7-list-item>
 				<f7-label>Gender</f7-label>
-				<f7-input type="select">
-					<option value="1">Male</option>
-					<option value="1">Female</option>
+				<f7-input type="select" v-model="title">
+					<option value="Male">Male</option>
+					<option value="Female">Female</option>
 				</f7-input>
 			</f7-list-item>
 			<f7-list-item>
 				<f7-label>Switch</f7-label>
 				<f7-input type="switch" v-model="title"></f7-input>
 			</f7-list-item>
-			<f7-list-item>
-				<f7-label>Range</f7-label>
-				<f7-input type="range" min="0" max="100" step="1" value="90" v-model="title"></f7-input>
-			</f7-list-item>
+			
 			<f7-list-item>
 				<f7-label>Textarea</f7-label>
 				<f7-input type="textarea" placeholder="Textarea"></f7-input>
@@ -132,7 +134,12 @@
 	export default {
 		data: function () {
 			return {
-			title: 'Change form field values and press ENTER',
+			title: '',
+			styleObj: {
+    			background: 'rgb(255,255,255)',
+				color: 'black'
+    			
+  			},
 			seen: false
         }},
     
@@ -140,6 +147,11 @@
             changeName: function(event) {
 				this.title = event.target.value;
 				this.seen = true
+			},
+
+			changeColor: function(event) {
+				this.styleObj.background = 'rgb(' + event.target.value + ',' + event.target.value + ',' + event.target.value + ')'
+				
 			},
 			
 			changeValue: function(event) {

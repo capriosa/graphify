@@ -26,6 +26,7 @@
 							<f7-list-item accordion-item title="Accordion Item 2">
 								<f7-accordion-content>
 									<f7-block>
+										
 										<p>Accordion Item 2 Content</p>
 										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu felis volutpat, rutrum ex quis, lobortis ex.
 											Curabitur quis mattis lorem. Nullam magna lacus, interdum vel maximus nec, vestibulum non quam. Phasellus ornare
@@ -61,43 +62,41 @@
 
 		<!-- Main Views -->
 		<f7-views>
-			<f7-view id="main-view" navbar-through :dynamic-navbar="true" main>
-				<!-- Navbar -->
-				<f7-navbar back-link="Back">
+			<f7-view id="main-view" main>
 
-					<f7-nav-center sliding>Graphify</f7-nav-center>
-					<f7-nav-right>
-						<f7-link icon="icon-bars" open-panel="right"></f7-link>
-					</f7-nav-right>
-				</f7-navbar>
-				<f7-toolbar tabbar swipeable bottom labels>
-					<f7-link tab-link="#tab1" text="Home">
-						<f7-icon f7="home_fill"></f7-icon>
-					</f7-link>
-					<f7-link tab-link="/graphcms" text="Photos">
-						<f7-icon f7="photos_fill"></f7-icon>
-					</f7-link>
-					<f7-link tab-link="#tab1" text="About">
-						<f7-icon f7="info_fill"></f7-icon>
-					</f7-link>
-					<f7-link tab-link="#tab1" text="More">
-						<f7-icon f7="favorites_fill"></f7-icon>
-					</f7-link>
-				</f7-toolbar>
+
+
 				<!-- Pages -->
 				<f7-pages>
 					<f7-page>
+						<!-- Navbar -->
+						<f7-navbar navbar-through>
+
+							<f7-nav-center sliding>Graphify</f7-nav-center>
+							<f7-nav-right>
+								<f7-link icon="icon-bars" open-panel="right"></f7-link>
+							</f7-nav-right>
+						</f7-navbar>
+						
 						<f7-block-title>Welcome to Graphify</f7-block-title>
 						<f7-block inner>
-							This is a demo Phonegap app build with Framework7, Vue.js and the GraphCMS.
+							This is a demo Phonegap app build with Framework7, Vue.js and the GraphCMS.<br>
+							Kitchen Sink shows all Framework7 components.
 						</f7-block>
-						<f7-block-title>Navigation</f7-block-title>
+						<f7-block>
+						<f7-block-title>Demo Components</f7-block-title>
+						
+						</f7-block>
 						<f7-list>
 							<f7-list-item link="/graphcms/" title="Demo content from GraphCMS"></f7-list-item>
 							<f7-list-item link="/form/" title="Form"></f7-list-item>
 							<f7-list-item link-open-panel link="left" title="Open Left Panel"></f7-list-item>
 							<f7-list-item link-open-popup link="#popup" title="Open Popup"></f7-list-item>
 							<f7-list-item link-open-login-screen link="#login-screen" title="Open Login Screen"></f7-list-item>
+							<f7-list-item link="/home/" title="Kitchen Sink">
+								<f7-icon slot="media" icon="icon-f7"></f7-icon>
+							</f7-list-item>
+
 						</f7-list>
 
 
