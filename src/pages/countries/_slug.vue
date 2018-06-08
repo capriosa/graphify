@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import AllCountryPosts from '~/components/AllCountryPosts';
+import AllCountryPosts from '../../components/AllCountryPosts';
 
   export default {
     components: {

@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import AllContinentPosts from '~/components/AllContinentPosts';
+import AllContinentPosts from '../../components/AllContinentPosts';
 
   export default {
     components: {

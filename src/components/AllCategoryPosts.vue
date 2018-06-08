@@ -2,13 +2,13 @@
   <f7-page>
     <f7-navbar title="GraphCMS" back-link="Back"></f7-navbar>
     <f7-block inner>
-    <h1>Demo content from my GraphCMS content model</h1>
+    <h1>{{this.$route.params.slug.toUpperCase() }}</h1>
     </f7-block>
     <section v-if="allCategoryRelations">
       <f7-block>
       <f7-grid>
       
-      <f7-col width="100" tablet-width="33" v-for="post in allCategoryRelations" :key="post.id">
+      <f7-col width="100" tablet-width="33" v-for="post in allCategoryRelations.photocollections" :key="post.id">
         <f7-block style="display:flex;justify-content:center">
         <f7-link :href="`/post/${post.slug}`" class="link">
         
@@ -19,7 +19,7 @@
               <img :alt="post.title" :src="`https://media.graphcms.com/resize=w:320,h:240,fit:crop/${post.photo.handle}`" />
             </div>
               
-             <teaserText :author="post.photographRelation.name" :location="post.location" :title="post.title" :date="post.date"/>
+             <TeaserText :author="post.photographRelation.name" :location="post.location" :title="post.title" :date="post.date"/>
           
 
       </f7-link>
@@ -28,7 +28,7 @@
         </f7-grid>
         </f7-block>
       <f7-block>
-        <f7-button v-if="postCount && postCount > allCategoryRelations.length" @click="loadMorePhotocollections">
+        <f7-button v-if="postCount && postCount > allCategoryRelations.photocollections.length" @click="loadMorePhotocollections">
           {{loading ? 'Loading...' : 'Show more'}}
         
       </f7-button>
@@ -80,7 +80,8 @@
     },
     data: () => ({
       loading: 0,
-      allCategoryRelations: []
+      allCategoryRelations: [],
+      postCount: null
     }),
     apollo: {
       $loadingKey: 'loading',
