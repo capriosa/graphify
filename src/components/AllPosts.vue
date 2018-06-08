@@ -1,21 +1,15 @@
 <template>
   <f7-page>
     <f7-navbar title="GraphCMS" back-link="Back"></f7-navbar>
-    
-    <f7-block inner>Copyright:<br> Photos on Unsplash
-    
-    
-    <f7-block-title>Demo content from my GraphCMS content model</f7-block-title>
-    
+    <f7-block inner>
+    <h1>Demo content from my GraphCMS content model</h1>
     </f7-block>
-
-
     <section v-if="allPhotocollections">
       <f7-block>
       <f7-grid>
       
       <f7-col width="100" tablet-width="33" v-for="post in allPhotocollections" :key="post.id">
-        <f7-block inner>
+        <f7-block inner class="display-flex justify-content-center">
         <f7-link :href="`/post/${post.slug}`" class="link">
         
 

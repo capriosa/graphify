@@ -78,13 +78,14 @@
 							</f7-nav-right>
 						</f7-navbar>
 						
-						<f7-block-title>Welcome to Graphify</f7-block-title>
+						
 						<f7-block inner>
+							<h1>Welcome to Graphify</h1>
 							This is a demo Phonegap app build with Framework7, Vue.js and the GraphCMS.<br>
 							Kitchen Sink shows all Framework7 components.
 						</f7-block>
 						<f7-block>
-						<f7-block-title>Demo Components</f7-block-title>
+						<h2>Demo Components</h2>
 						
 						</f7-block>
 						<f7-list>

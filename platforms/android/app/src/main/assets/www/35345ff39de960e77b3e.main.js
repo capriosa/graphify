@@ -48782,12 +48782,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
 
 
 
@@ -48970,7 +48964,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "inner": ""
     }
-  }, [_vm._v("Copyright:"), _c('br'), _vm._v(" Photos on Unsplash\n  \n  \n  "), _c('f7-block-title', [_vm._v("Demo content from my GraphCMS content model")])], 1), _vm._v(" "), (_vm.allPhotocollections) ? _c('section', [_c('f7-block', [_c('f7-grid', _vm._l((_vm.allPhotocollections), function(post) {
+  }, [_c('h1', [_vm._v("Demo content from my GraphCMS content model")])]), _vm._v(" "), (_vm.allPhotocollections) ? _c('section', [_c('f7-block', [_c('f7-grid', _vm._l((_vm.allPhotocollections), function(post) {
     return _c('f7-col', {
       key: post.id,
       attrs: {
@@ -48978,6 +48972,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "tablet-width": "33"
       }
     }, [_c('f7-block', {
+      staticClass: "display-flex justify-content-center",
       attrs: {
         "inner": ""
       }
@@ -95454,6 +95449,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 	name: 'app'
@@ -95572,11 +95568,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "icon": "icon-bars",
       "open-panel": "right"
     }
-  })], 1)], 1), _vm._v(" "), _c('f7-block-title', [_vm._v("Welcome to Graphify")]), _vm._v(" "), _c('f7-block', {
+  })], 1)], 1), _vm._v(" "), _c('f7-block', {
     attrs: {
       "inner": ""
     }
-  }, [_vm._v("\n\t\t\t\t\t\tThis is a demo Phonegap app build with Framework7, Vue.js and the GraphCMS."), _c('br'), _vm._v("\n\t\t\t\t\t\tKitchen Sink shows all Framework7 components.\n\t\t\t\t\t")]), _vm._v(" "), _c('f7-block', [_c('f7-block-title', [_vm._v("Demo Components")])], 1), _vm._v(" "), _c('f7-list', [_c('f7-list-item', {
+  }, [_c('h1', [_vm._v("Welcome to Graphify")]), _vm._v("\n\t\t\t\t\t\tThis is a demo Phonegap app build with Framework7, Vue.js and the GraphCMS."), _c('br'), _vm._v("\n\t\t\t\t\t\tKitchen Sink shows all Framework7 components.\n\t\t\t\t\t")]), _vm._v(" "), _c('f7-block', [_c('h2', [_vm._v("Demo Components")])]), _vm._v(" "), _c('f7-list', [_c('f7-list-item', {
     attrs: {
       "link": "/graphcms/",
       "title": "Demo content from GraphCMS"
