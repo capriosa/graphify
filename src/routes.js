@@ -3,6 +3,7 @@ import Post from './pages/post/_slug.vue'
 import Categories from './pages/categories/_slug.vue'
 import Continents from './pages/continents/_slug.vue'
 import Countries from './pages/countries/_slug.vue'
+import PhotographPosts from './pages/photographPosts/_slug.vue'
 import Graphcms from './pages/graphcms.vue'
 import Form from './pages/form.vue'
 import Home from './pages/home.vue';
@@ -136,6 +137,11 @@ export default [
         path: '/countries/:slug',
         name: 'countries',
         component: Countries
+    },
+    {
+        path: '/photographPosts/:slug',
+        name: 'photographPosts',
+        component: PhotographPosts
     },
 
     {
