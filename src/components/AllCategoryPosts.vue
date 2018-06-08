@@ -1,46 +1,54 @@
 <template>
-  <div class="max-width-4 mx-auto px1">
-
+  <f7-page>
+    <f7-navbar title="GraphCMS" back-link="Back"></f7-navbar>
+    <f7-block inner>
+    <h1>Demo content from my GraphCMS content model</h1>
+    </f7-block>
     <section v-if="allCategoryRelations">
+      <f7-block>
+      <f7-grid>
       
-      <div class="clearfix">
-      <h1 class="h1">{{ this.$route.params.slug.toUpperCase() }}</h1>
+      <f7-col width="100" tablet-width="33" v-for="post in allCategoryRelations" :key="post.id">
+        <f7-block style="display:flex;justify-content:center">
+        <f7-link :href="`/post/${post.slug}`" class="link">
+        
 
-      
-      <div   v-for="post in allCategoryRelations.photocollections" :key="post.id" class="lg-col lg-col-4 pr1 my3">
-        <router-link :to="`/post/${post.slug}`">
-          <f7-block inner>
+          
             <div class="placeholder">
 
-              <img :alt="post.title" :src="`https://media.graphcms.com/resize=w:400,h:280,fit:crop/${post.photo.handle}`" />
+              <img :alt="post.title" :src="`https://media.graphcms.com/resize=w:320,h:240,fit:crop/${post.photo.handle}`" />
             </div>
-          </f7-block>
-          <TeaserText :author="post.photographRelation.name" :post="post.title" :location="post.location" :date="post.date"/>
+              
+             <teaserText :author="post.photographRelation.name" :location="post.location" :title="post.title" :date="post.date"/>
+          
 
-        </router-link>
-        </div>
-        </div>
+      </f7-link>
+      </f7-block>
+        </f7-col>
+        </f7-grid>
+        </f7-block>
+      <f7-block>
+        <f7-button v-if="postCount && postCount > allCategoryRelations.length" @click="loadMorePhotocollections">
+          {{loading ? 'Loading...' : 'Show more'}}
         
-    <div class="flex items-center my2">
-        <button class="btn btn-primary" v-if="postCount && postCount > allCategoryRelations.length" @click="loadMorePhotocollections">
-          {{loading ? 'Loading...' : 'Show more'}} </button>
+      </f7-button>
+      </f7-block>
 
-
-      </div>
     </section>
-    <div class="max-width-4 mx-auto px1" v-else>
+    <f7-block v-else>
     <h2>
       Loading...
     </h2>
+    <f7-preloader color="blue" size="44px"></f7-preloader>
+    </f7-block>
 
-    </div>
-
-  </div>
+  </f7-page>
 </template>
+
 
 <script>
   import gql from 'graphql-tag'
-  import TeaserText from '~/components/TeaserText';
+  import TeaserText from '../components/TeaserText';
   const Photocollections_PER_PAGE = 9
 
   const allCategoryRelations = gql `
@@ -68,8 +76,7 @@
   export default {
     name: 'CategoryRelations',
     components: {
-      AmpImg,
-      TeaserImg
+      TeaserText
     },
     data: () => ({
       loading: 0,

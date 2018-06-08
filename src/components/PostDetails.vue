@@ -11,8 +11,11 @@
       <f7-fab color="pink" @click="addLike">
         <f7-badge color="pink">{{ photocollection.likes }}</f7-badge>
       </f7-fab>
-      <f7-block-title>Demo content from my GraphCMS photocollection content model</f7-block-title>
-      <f7-block inner>Copyright
+      <f7-block inner>
+          <h1>{{ photocollection.title }}</h1>
+          <f7-badge class="badge color-blue">{{ photocollection.read }} reads</f7-badge>
+          </f7-block>
+      <f7-block><b>Copyright</b>
         <br> Text: Wikipedia
         <br> 
         <span>
@@ -27,10 +30,7 @@
         
       </f7-block>
         <section>
-          <f7-block-title>
-          <h1>{{ photocollection.title }}</h1>
-          {{ photocollection.read }} reads
-          </f7-block-title>
+          
           <f7-block inner>
             <div class="placeholder">
               <img :alt="photocollection.title" :src="`https://media.graphcms.com/resize=w:800,h:480,fit:crop/${photocollection.photo.handle}`"/>
@@ -39,19 +39,19 @@
             <div>
             <h4>Categories:</h4>
             <a :href="`/continents/${photocollection.continent}`" class="link">
-              {{ photocollection.continent.toUpperCase() }}
+              <f7-badge>{{ photocollection.continent.toUpperCase() }}</f7-badge>
             </a>
             <span>&nbsp;</span>
             <a :href="`/countries/${photocollection.country}`" class="link">
-              {{ photocollection.country.toUpperCase() }}
+              <f7-badge>{{ photocollection.country.toUpperCase() }}</f7-badge>
             </a>
           </div>
           <div>
 
             <span v-for="cat in photocollection.categoryRelations" :key="cat.id">
-              <a :href="`/categories/${cat.slug}`" class="link">
-                {{ cat.slug.toUpperCase() }}
-              </a>
+              <f7-link :href="`/categories/${cat.slug}`" class="link">
+                <f7-badge>{{ cat.slug.toUpperCase() }}</f7-badge>
+              </f7-link>
               &nbsp;</span>
           </div>
             <vue-markdown>{{photocollection.content}}</vue-markdown>

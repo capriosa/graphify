@@ -1,5 +1,6 @@
 import Vue from 'vue'
-import Post from './pages/post.vue'
+import Post from './pages/post/_slug.vue'
+import Categories from './pages/categories/_slug.vue'
 import Graphcms from './pages/graphcms.vue'
 import Form from './pages/form.vue'
 import Home from './pages/home.vue';

@@ -9,7 +9,7 @@
       <f7-grid>
       
       <f7-col width="100" tablet-width="33" v-for="post in allPhotocollections" :key="post.id">
-        <f7-block inner class="display-flex justify-content-center">
+        <f7-block style="display:flex;justify-content:center">
         <f7-link :href="`/post/${post.slug}`" class="link">
         
 

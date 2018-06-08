@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import PostDetails from '~/components/PostDetails';
+import PostDetails from '../../components/PostDetails';
 
   export default {
     components: {
