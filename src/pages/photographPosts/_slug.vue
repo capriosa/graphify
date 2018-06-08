@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import AllByAuthor from '~/components/AllByAuthor';
+import AllByAuthor from '../../components/AllByAuthor';
 
   export default {
     components: {
