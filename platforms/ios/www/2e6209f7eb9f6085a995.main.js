@@ -49969,7 +49969,8 @@ const allPhotographRelations = __WEBPACK_IMPORTED_MODULE_0_graphql_tag___default
   },
   data: () => ({
     loading: 0,
-    allPhotographRelations: []
+    allPhotographRelations: [],
+    postCount: null
   }),
   apollo: {
 
@@ -50033,8 +50034,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       }
     })]), _vm._v(" "), _c('TeaserText', {
       attrs: {
-        "post": post.title,
+        "author": post.photographRelation.name,
         "location": post.location,
+        "title": post.title,
         "date": post.date
       }
     })], 1)], 1)], 1)

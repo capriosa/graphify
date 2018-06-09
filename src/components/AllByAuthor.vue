@@ -8,7 +8,7 @@
       <f7-block>
       <f7-grid>
       
-      <f7-col width="100" tablet-width="33" v-for="post in allPhotographRelations" :key="post.id">
+      <f7-col width="100" tablet-width="33" v-for="post in allPhotographRelations.photocollections" :key="post.id">
         <f7-block style="display:flex;justify-content:center">
         <f7-link :href="`/post/${post.slug}`" class="link">
         
@@ -19,7 +19,7 @@
               <img :alt="post.title" :src="`https://media.graphcms.com/resize=w:320,h:240,fit:crop/${post.photo.handle}`" />
             </div>
               
-            <TeaserText :post="post.title" :location="post.location" :date="post.date"/>
+             <TeaserText :author="post.name" :location="post.location" :title="post.title" :date="post.date"/>
           
 
       </f7-link>
@@ -75,7 +75,8 @@
     },
     data: () => ({
       loading: 0,
-      allPhotographRelations: []
+      allPhotographRelations: [],
+      postCount: null
     }),
     apollo: {
 
