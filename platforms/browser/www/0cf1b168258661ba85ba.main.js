@@ -50008,7 +50008,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('h1', {
     staticClass: "h1"
-  }, [_vm._v("Images by " + _vm._s(_vm.allPhotographRelations.name))])]), _vm._v(" "), (_vm.allPhotographRelations) ? _c('section', [_c('f7-block', [_c('f7-grid', _vm._l((_vm.allPhotographRelations), function(post) {
+  }, [_vm._v("Images by " + _vm._s(_vm.allPhotographRelations.name))])]), _vm._v(" "), (_vm.allPhotographRelations) ? _c('section', [_c('f7-block', [_c('f7-grid', _vm._l((_vm.allPhotographRelations.photocollections), function(post) {
     return _c('f7-col', {
       key: post.id,
       attrs: {
@@ -50034,7 +50034,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       }
     })]), _vm._v(" "), _c('TeaserText', {
       attrs: {
-        "author": post.photographRelation.name,
+        "author": post.name,
         "location": post.location,
         "title": post.title,
         "date": post.date
